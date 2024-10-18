@@ -3,8 +3,8 @@ import React from "react";
 const laptopNavs = [
   {
     id: 1,
-    name: "Products",
-    url: "#Products",
+    name: "Home",
+    url: "#home",
   },
   {
     id: 2,
@@ -27,12 +27,12 @@ const LaptopNav = () => {
   return (
     <>
       <ul className="hidden md:flex items-center gap-5">
-        { laptopNavs.map((laptopNav)=>{
-            return(
-                <li key={laptopNav.id}>
-                    <a href={laptopNav.url}>{laptopNav.name}</a>
-                </li>
-            )
+        {laptopNavs.map((laptopNav) => {
+          return (
+            <li className=" hover:text-primary" key={laptopNav.id}>
+              <a href={laptopNav.url}>{laptopNav.name}</a>
+            </li>
+          );
         })}
       </ul>
     </>
