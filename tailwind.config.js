@@ -1,15 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: ["class"],
-    content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  darkMode: ["class"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
   	extend: {
   		colors: {
   			primary: {
-  				DEFAULT: '#FE6B7E',
+  				DEFAULT: '#f97316',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
   			secondary: {
@@ -50,7 +47,9 @@ export default {
   			}
   		},
   		fontFamily: {
-  			poppins: ["Poppins", "sans-serif"]
+  			sans: ["Poppins", "sans-serif"],
+  			handwriting: ["Merienda", "cursive"],
+  			poppin: ["Poppins", "sans-serif"]
   		},
   		container: {
   			center: 'true',
@@ -66,8 +65,30 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

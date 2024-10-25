@@ -1,4 +1,6 @@
+import { User } from "lucide-react";
 import React from "react";
+import { UpdateFollower } from "react-mouse-follower";
 
 const laptopNavs = [
   {
@@ -26,14 +28,40 @@ const laptopNavs = [
 const LaptopNav = () => {
   return (
     <>
-      <ul className="hidden md:flex items-center gap-5">
+      <ul className="hidden md:flex items-center gap-5 ">
         {laptopNavs.map((laptopNav) => {
           return (
-            <li className=" hover:text-primary" key={laptopNav.id}>
-              <a href={laptopNav.url}>{laptopNav.name}</a>
+            <li className=" hover:text-black cursor-pointer" key={laptopNav.id}>
+              <UpdateFollower
+                mouseOptions={{
+                  backgroundColor: "white",
+                  scale: 6,
+                  zIndex: 40,
+                  followSpeed: 1.5,
+                  mixBlendMode: "difference",
+                }}
+              >
+                <a href={laptopNav.url}>{laptopNav.name}</a>
+              </UpdateFollower>
             </li>
           );
         })}
+
+        <li className="ml-10">
+          <button className="w-full hover:text-black">
+            <UpdateFollower
+              mouseOptions={{
+                backgroundColor: "white",
+                scale: 6,
+                zIndex: 40,
+                followSpeed: 1.5,
+                mixBlendMode: "difference",
+              }}
+            >
+              <User size={24} />
+            </UpdateFollower>
+          </button>
+        </li>
       </ul>
     </>
   );
