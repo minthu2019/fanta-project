@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import { motion } from "framer-motion";
 
@@ -6,7 +6,24 @@ import LaptopNav from "./LaptopNav";
 import MobileNav from "./MobileNav";
 import { UpdateFollower } from "react-mouse-follower";
 
-const Navbar = () => {
+const Navbar = ({className}) => {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  const HandleScroll = () => {
+    if (window.scrollY > 500) {
+      setIsScrolled(true)
+    }else{
+      setIsScrolled(false)
+    }
+  }
+
+  useEffect(()=>{
+    window.addEventListener('scroll', HandleScroll)
+    return () => {
+      window.removeEventListener('scroll', HandleScroll)
+    }
+  },[])
+ 
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -14,7 +31,7 @@ const Navbar = () => {
         opacity: 1,
         transition: { duration: 0.5, delay: 0.4, ease: "easeInOut" },
       }}
-      className={`container text-white py-3 flex items-center justify-between z-20`}
+      className={`container ${isScrolled && ` sticky inset-0 z-[40] bg-slate-400 bg-opacity-55   `} text-white py-3 flex items-center justify-between`}
     >
       {/* logo section */}
       <div>

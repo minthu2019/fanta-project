@@ -35,7 +35,7 @@ const blogArrays = [
 
 const Blog = () => {
   return (
-    <section>
+    <section name="Blog">
       <div className=" container bg-[#F3F4F6] text-center py-10 ">
         <h1 className="text-3xl font-bold text-gray-900 my-8">Blog</h1>
         <div className=" flex items-center justify-center p-4">

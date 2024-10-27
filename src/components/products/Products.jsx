@@ -34,7 +34,7 @@ const productArrays = [
 
 const Products = () => {
   return (
-    <section>
+    <section  name="Custome">
       <div className="container py-12 bg-[#F3F4F6] mb-10">
         <div className="flex items-center justify-center flex-col space-y-4">
           <motion.h2

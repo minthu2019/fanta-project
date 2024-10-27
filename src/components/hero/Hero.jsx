@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import fanta1 from "../../assets/fanta1.png";
 import fanta2 from "../../assets/fanta2.png";
 import fanta3 from "../../assets/fanta3.png";
-import Navbar from "../navbar/Navbar";
 import { AnimatePresence, easeInOut, motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { Separator } from "@/components/ui/separator";
 import { FaWhatsapp } from "react-icons/fa";
 import { SlideLeft, SlideUp } from "@/utility/animation";
 import { UpdateFollower } from "react-mouse-follower";
+import Navbar from "../navbar/Navbar";
 
 const heroDatas = [
   {
@@ -47,41 +47,20 @@ const heroDatas = [
 ];
 
 const Hero = () => {
-  // const [isScrolled, setIsScrolled] = useState(false);
   const [activeData, setActiveData] = useState(heroDatas[0]);
-
-  // const handleScrolled = () => {
-  //   if (window.scrollY > 10) {
-  //     setIsScrolled(true);
-  //   } else {
-  //     setIsScrolled(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScrolled);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScrolled);
-  //   };
-  // }, []);
-
-  // console.log(isScrolled)
 
   const HandleActiveData = (data) => {
     setActiveData(data);
   };
 
   return (
-    <section>
+    <section name="Home">
       <motion.div
         initial={{ backgroundColor: activeData.bgColor }}
         animate={{ backgroundColor: activeData.bgColor }}
         transition={{ duration: 0.5 }}
       >
-        {/* navbar component */}
-        <Navbar />
-        {/* className={`${isScrolled && " sticky top-0 z-40 "}`} */}
-
+        <Navbar/>
         <div className="container relative grid grid-cols-1 md:grid-cols-2 min-h-[85vh]">
           {/* Dato info */}
           <div className=" flex flex-col justify-center z-20  text-white py-14 md:py-0 order-2 md:order-1 md:max-w-[450px] xl:max-w-[500px]">

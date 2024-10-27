@@ -6,6 +6,9 @@ import About from "./components/about/About";
 import Blog from "./components/blog/Blog";
 import Question from "./components/f&q/Question";
 import Footer from "./components/footer/Footer";
+import Navbar from "./components/navbar/Navbar";
+
+
 
 const App = () => {
   return (
@@ -17,7 +20,9 @@ const App = () => {
           followSpeed: 1.5,
         }}
       >
+        
         <Hero />
+        <Navbar/>
         <Products/>
         <About/>
         <Blog/>

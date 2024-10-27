@@ -3,27 +3,33 @@ import { Menu, User } from "lucide-react";
 import logo from "../../assets/logo.png";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { UpdateFollower } from "react-mouse-follower";
+import { Link } from "react-scroll";
 
 const mobileNavs = [
   {
     id: 1,
     name: "Home",
-    url: "#Home",
+    url: "Home",
   },
   {
     id: 2,
     name: "Custome Stories",
-    url: "#Custome",
+    url: "Custome",
   },
   {
     id: 3,
     name: "About",
-    url: "#About",
+    url: "About",
   },
   {
     id: 4,
     name: "Blog",
-    url: "#Blog",
+    url: "Blog",
+  },
+  {
+    id: 5,
+    name: "A&Q",
+    url: "Question",
   },
 ];
 
@@ -43,7 +49,7 @@ const MobileNav = () => {
           <ul className=" flex items-center justify-center flex-col gap-10 ">
             {mobileNavs.map((mobileNav) => {
               return (
-                <li
+                <Link to={mobileNav.url}
                   key={mobileNav.id}
                   className="hover:text-blue-500 cursor-pointer z-[9999]"
                 >
@@ -58,7 +64,7 @@ const MobileNav = () => {
                   >
                     <a href={mobileNav.url}>{mobileNav.name}</a>
                   </UpdateFollower>
-                </li>
+                </Link>
               );
             })}
             <li className="md:ml-10">

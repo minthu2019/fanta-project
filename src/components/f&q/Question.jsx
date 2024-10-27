@@ -30,7 +30,7 @@ const questionArrays = [
 
 const Question = () => {
   return (
-    <section>
+    <section name="Question">
       <div className="container py-12 bg-white">
         <h1 className=" text-3xl text-center font-bold py-4">
           Frequently Asked Questions

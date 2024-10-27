@@ -1,27 +1,33 @@
 import { User } from "lucide-react";
 import React from "react";
 import { UpdateFollower } from "react-mouse-follower";
+import { Link } from "react-scroll";
 
 const laptopNavs = [
   {
     id: 1,
     name: "Home",
-    url: "#home",
+    url: "Home",
   },
   {
     id: 2,
     name: "Custome Stories",
-    url: "#Custome",
+    url: "Custome",
   },
   {
     id: 3,
     name: "About",
-    url: "#About",
+    url: "About",
   },
   {
     id: 4,
     name: "Blog",
-    url: "#Blog",
+    url: "Blog",
+  },
+  {
+    id: 5,
+    name: "A&Q",
+    url: "Question",
   },
 ];
 
@@ -31,7 +37,7 @@ const LaptopNav = () => {
       <ul className="hidden md:flex items-center gap-5 ">
         {laptopNavs.map((laptopNav) => {
           return (
-            <li className=" hover:text-black cursor-pointer" key={laptopNav.id}>
+            <Link to={laptopNav.url} className=" hover:text-black cursor-pointer" key={laptopNav.id}>
               <UpdateFollower
                 mouseOptions={{
                   backgroundColor: "white",
@@ -43,7 +49,7 @@ const LaptopNav = () => {
               >
                 <a href={laptopNav.url}>{laptopNav.name}</a>
               </UpdateFollower>
-            </li>
+            </Link>
           );
         })}
 
