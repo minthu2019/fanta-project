@@ -10,7 +10,7 @@ const Navbar = ({className}) => {
   const [isScrolled, setIsScrolled] = useState(false)
 
   const HandleScroll = () => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 1000) {
       setIsScrolled(true)
     }else{
       setIsScrolled(false)
