@@ -8,8 +8,6 @@ import Question from "./components/f&q/Question";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 
-
-
 const App = () => {
   return (
     <main>
@@ -20,14 +18,12 @@ const App = () => {
           followSpeed: 1.5,
         }}
       >
-        
         <Hero />
-        <Navbar/>
-        <Products/>
-        <About/>
-        <Blog/>
-        <Question/>
-        <Footer/>
+        <Products />
+        <About />
+        <Blog />
+        <Question />
+        <Footer />
       </UpdateFollower>
     </main>
   );
