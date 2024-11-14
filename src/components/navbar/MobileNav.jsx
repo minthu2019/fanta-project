@@ -41,7 +41,7 @@ const MobileNav = () => {
           <Menu size={30} color="white" />
         </SheetTrigger>
 
-        <SheetContent className="h-screen flex items-center justify-center flex-col invert ">
+        <SheetContent className="h-screen flex items-center justify-center flex-col invert z-40">
           <div className="flex items-center justify-center pb-10 ">
             <img src={logo} alt="logo" className="w-36" />
           </div>

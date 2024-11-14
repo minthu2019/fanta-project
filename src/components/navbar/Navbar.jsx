@@ -17,11 +17,11 @@ const Navbar = ({ className }) => {
 
     if (window.scrollY > 0) {
       setIsScrolled(true);
-      setNavbarClass("fixed inset-0 h-[80px] bg-slate-400 bg-opacity-85 z-[999999]");
+      setNavbarClass("fixed inset-0 h-[80px] bg-slate-400 bg-opacity-85 z-30");
       
       const id = setTimeout(() => {
         setNavbarClass("hidden duration-500 delay-300 ease");
-      }, 2000);
+      }, 3000);
       
       setTimeoutId(id);
     } else {
@@ -44,7 +44,7 @@ const Navbar = ({ className }) => {
         opacity: 1,
         transition: { duration: 0.5, delay: 0.4, ease: "easeInOut" },
       }}
-      className={`container ${navbarClass} text-white py-3 flex items-center justify-between`}
+      className={`container ${navbarClass} text-white py-3 flex items-center justify-between z-10`}
     >
       {/* logo section */}
       <div>
