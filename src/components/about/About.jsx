@@ -7,7 +7,7 @@ import { SlideRight, SlideUp } from "@/utility/animation";
 
 const About = () => {
   return (
-    <section name="About">
+    <section name="About ">
       <div className=" container flex items-center justify-center flex-col">
         <div className=" grid grid-cols-1 md:grid-cols-2">
           {/* image section */}
